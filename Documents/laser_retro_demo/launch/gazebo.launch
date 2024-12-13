@@ -1,0 +1,5 @@
+<launch>
+  <arg name="world_file" default="$(find laser_retro_demo)/worlds/laser_world.world" />
+  <node name="gazebo" pkg="gazebo_ros" type="gzserver" args="-s libgazebo_ros_factory.so $(arg world_file)" output="screen" />
+  <node name="gazebo_client" pkg="gazebo_ros" type="gzclient" output="screen" />
+</launch>

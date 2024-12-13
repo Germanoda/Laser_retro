@@ -1,0 +1,19 @@
+<sdf version="1.6">
+  <world name="laser_retro_world">
+    <!-- Luz ambiente -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Parede com laser_retro -->
+    <include>
+      <uri>model://laser_wall</uri>
+      <pose>0 0 1 0 0 0</pose> <!-- Localização da parede -->
+    </include>
+  </world>
+</sdf>

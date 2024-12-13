@@ -1,0 +1,29 @@
+<sdf version="1.6">
+  <model name="laser_wall">
+    <static>true</static>
+    <link name="wall_link">
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>5 0.1 2</size> <!-- Parede de 5m x 0.1m x 2m -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1.0</ambient> <!-- Cor cinza -->
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>5 0.1 2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <laser_retro>15.0</laser_retro> <!-- Valor do laser_retro -->
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>
